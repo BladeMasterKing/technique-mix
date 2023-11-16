@@ -1,0 +1,27 @@
+# 服务端口
+server:
+  port: 9011
+# 多数据源配置
+spring:
+  application:
+    name: code-test
+  datasource:
+    dynamic:
+      primary: sqlite
+      datasource:
+        sqlite:
+          driver-class-name: org.sqlite.JDBC
+          url: jdbc:sqlite:/Users/wangjiansheng/github/code-test/src/main/resources/db/test.db
+          username:
+          password:
+#        mysql:
+#          driver-class-name: com.mysql.jdbc.Driver
+#          url: jdbc:mysql://127.0.0.1:3306/db_product
+#          username: root
+#          password: 123456
+
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
